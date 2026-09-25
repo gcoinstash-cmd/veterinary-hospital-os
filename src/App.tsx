@@ -202,7 +202,7 @@ export const App: React.FC = () => {
 
             <button
               onClick={() => setIsAdminOpen(true)}
-              className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:border-emerald-500/50 text-xs sm:text-sm font-mono font-bold tracking-wider transition-all"
+              className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:border-emerald-500/50 text-base font-semibold font-mono font-bold tracking-wider transition-all"
             >
               <Lock className="w-3.5 h-3.5" />
               [ VET PASS ]
@@ -234,13 +234,13 @@ export const App: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <button 
                 onClick={() => setActiveTab('surgery')}
-                className="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm font-mono tracking-wider transition-all shadow-lg shadow-emerald-500/25 flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base font-semibold font-mono tracking-wider transition-all shadow-lg shadow-emerald-500/25 flex items-center gap-2"
               >
                 <HeartPulse className="w-4 h-4" /> MONITOR SURGICAL TELEMETRY
               </button>
               <button 
                 onClick={() => setActiveTab('pharmacy')}
-                className="px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-mono text-xs sm:text-sm border border-white/10 transition-colors flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-mono text-base font-semibold border border-white/10 transition-colors flex items-center gap-2"
               >
                 <Pill className="w-4 h-4 text-emerald-400" /> Dispensary Queue
               </button>
@@ -249,7 +249,7 @@ export const App: React.FC = () => {
         </section>
 
         {/* Tab Controls */}
-        <div className="flex items-center gap-2 border-b border-white/10 pb-3 font-mono text-xs sm:text-sm">
+        <div className="flex items-center gap-2 border-b border-white/10 pb-3 font-mono text-base font-semibold">
           <button
             onClick={() => setActiveTab('patients')}
             className={`px-4 py-2 rounded-lg transition-all font-bold ${
@@ -306,7 +306,7 @@ export const App: React.FC = () => {
                         <span className="text-base font-bold text-white">{pet.name}</span>
                         <span className="text-xs font-mono text-slate-400">({pet.species})</span>
                       </div>
-                      <p className="text-xs text-slate-400 mt-1">{pet.breed} • {pet.age}</p>
+                      <p className="text-base text-zinc-200 leading-relaxed mt-1">{pet.breed} • {pet.age}</p>
                     </div>
                     <span className={`text-xs font-mono px-2.5 py-1 rounded font-bold uppercase ${
                       pet.triagePriority === 'CRITICAL' ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30 animate-pulse' :
@@ -343,7 +343,7 @@ export const App: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-bold text-white">Active Operating Room Suites</h3>
-                <p className="text-xs text-slate-400 font-mono">Live Anesthesia Monitoring & Multi-Parameter Vitals</p>
+                <p className="text-base text-zinc-200 leading-relaxed font-mono">Live Anesthesia Monitoring & Multi-Parameter Vitals</p>
               </div>
               <button
                 onClick={() => setIsAdminOpen(true)}
@@ -363,7 +363,7 @@ export const App: React.FC = () => {
 
                   <div>
                     <h4 className="text-base font-bold text-white">{s.patientName}</h4>
-                    <p className="text-xs text-slate-400 mt-0.5">{s.surgeon}</p>
+                    <p className="text-base text-zinc-200 leading-relaxed mt-0.5">{s.surgeon}</p>
                     <p className="text-xs text-emerald-200 mt-2 bg-black/40 p-2.5 rounded-xl border border-white/5 font-mono">
                       {s.procedure}
                     </p>
@@ -391,7 +391,7 @@ export const App: React.FC = () => {
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
                 <h3 className="text-lg font-bold text-white">In-House Pharmacy & Controlled Substances Log</h3>
-                <p className="text-xs text-slate-400 font-mono">DEA Form 222 Automated Prescription Dispensing System</p>
+                <p className="text-base text-zinc-200 leading-relaxed font-mono">DEA Form 222 Automated Prescription Dispensing System</p>
               </div>
               <button
                 onClick={() => setIsAdminOpen(true)}
@@ -402,7 +402,7 @@ export const App: React.FC = () => {
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs sm:text-sm font-mono">
+              <table className="w-full text-left text-base font-semibold font-mono">
                 <thead>
                   <tr className="border-b border-white/10 text-slate-400 uppercase">
                     <th className="py-3 px-4">Rx Number</th>
